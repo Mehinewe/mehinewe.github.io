@@ -13,15 +13,8 @@
     <link rel="stylesheet" href="styles.css">
     <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <style>
-        .page-header {
-            padding: 160px 0 60px;
-            text-align: center;
-            background-color: var(--bg-alt);
-        }
-    </style>
 </head>
-<body>
+<body class="bg-light">
 
     <!-- Header Navigation -->
     <header id="header">
@@ -44,76 +37,93 @@
         </div>
     </header>
 
-    <div class="page-header">
+    <div class="portfolio-header">
         <div class="container">
-            <h1>Featured Projects</h1>
-            <p>A selection of my recent data visualization and analytics projects showcasing my expertise in creating insightful dashboards.</p>
+            <h1>Data Analytics Portfolio</h1>
+            <p>A comprehensive collection of interactive dashboards, data analysis projects, and machine learning applications designed to transform complex data into actionable insights.</p>
+            
+            <div class="filters">
+                <button class="btn btn-primary">All Projects</button>
+                <button class="filter-btn">Dashboards</button>
+                <button class="filter-btn">Data Analysis</button>
+                <button class="filter-btn">Machine Learning</button>
+            </div>
         </div>
     </div>
 
-    <!-- Featured Projects Section -->
-    <section id="portfolio" class="projects">
-        <div class="container projects-grid">
-            <!-- Project 1 -->
-            <div class="project-card">
-                <div class="project-img">
-                    <img src="sales_dashboard.png" alt="Sales Performance Dashboard">
+    <section class="portfolio-content" style="padding-top: 0;">
+        <div class="container">
+            <!-- Section 1 -->
+            <h2 class="portfolio-section-title">Power BI / Tableau Dashboards</h2>
+            
+            <div class="featured-project">
+                <div class="featured-img">
+                    <img src="dermatology_dashboard.png" alt="Dermatology Practice Performance Dashboard">
                 </div>
-                <div class="project-info">
-                    <h3>Sales Performance Dashboard</h3>
-                    <p>Interactive Power BI dashboard tracking key sales metrics and regional performance.</p>
+                <div class="featured-info">
+                    <span class="badge">Featured Project</span>
+                    <h3>Dermatology Practice Performance Dashboard</h3>
+                    <p>A comprehensive dashboard that provides a complete view of a dermatology practice's performance metrics, enabling providers and administrators to track key indicators and identify areas for improvement.</p>
                     <div class="tags">
                         <span class="tag">Power BI</span>
-                        <span class="tag">Sales Analytics</span>
-                        <span class="tag">Data Visualization</span>
+                        <span class="tag">Healthcare Analytics</span>
+                        <span class="tag">Business Intelligence</span>
+                        <span class="tag">Financial Analysis</span>
                     </div>
-                    <a href="#" class="view-link">View Details <i class="ph ph-arrow-right"></i></a>
+                    <a href="#" class="btn btn-primary" style="margin-top: 1rem;">View Project Details <i class="ph ph-arrow-right"></i></a>
                 </div>
             </div>
 
-            <!-- Project 2 -->
-            <div class="project-card">
-                <div class="project-img">
-                    <img src="financial_dashboard.png" alt="Financial Performance Analysis">
+            <div class="thumbnails-grid">
+                <div class="thumb-card"><img src="sales_dashboard.png" alt="Sales Dashboard"></div>
+                <div class="thumb-card"><img src="financial_dashboard.png" alt="Financial Dashboard"></div>
+                <div class="thumb-card"><img src="health_dashboard.png" alt="Health Dashboard"></div>
+                <div class="thumb-card"><img src="hr_dashboard.png" alt="HR Dashboard"></div>
+                <div class="thumb-card"><img src="marketing_dashboard.png" alt="Marketing Dashboard"></div>
+                <div class="thumb-card"><img src="dermatology_dashboard.png" alt="Dermatology Dashboard 2"></div>
+            </div>
+
+            <!-- Section 2 -->
+            <h2 class="portfolio-section-title" style="margin-top:5rem;">Data Extraction, Cleaning, and Analysis Examples</h2>
+            
+            <div class="gradient-grid">
+                <div class="gradient-card grad-purple">
+                    <span>📊 Data Cleaning & Exploratory Analysis</span>
                 </div>
-                <div class="project-info">
-                    <h3>Financial Performance Analysis</h3>
-                    <p>Comprehensive financial analytics dashboard with forecasting capabilities.</p>
-                    <div class="tags">
-                        <span class="tag">Power BI</span>
-                        <span class="tag">Financial Analytics</span>
-                        <span class="tag">Forecasting</span>
-                    </div>
-                    <a href="#" class="view-link">View Details <i class="ph ph-arrow-right"></i></a>
+                <div class="gradient-card grad-pink">
+                    <span>📈 Life Expectancy & GDP Analysis</span>
+                </div>
+                <div class="gradient-card grad-light">
+                    <span>🔄 More Projects Coming Soon</span>
                 </div>
             </div>
 
-            <!-- Project 3 -->
-            <div class="project-card">
-                <div class="project-img">
-                    <img src="health_dashboard.png" alt="Health Dashboard">
+            <!-- Section 3 -->
+            <h2 class="portfolio-section-title" style="margin-top:5rem;">Machine Learning Examples</h2>
+            
+            <div class="gradient-grid" style="grid-template-columns: repeat(2, 1fr);">
+                <div class="gradient-card grad-cyan">
+                    <span>🧠 ML Projects Coming Soon</span>
                 </div>
-                <div class="project-info">
-                    <h3>Health Dashboard</h3>
-                    <p>Analysis of obesity and heart disease trends across America with geographic insights.</p>
-                    <div class="tags">
-                        <span class="tag">Power BI</span>
-                        <span class="tag">Health Analytics</span>
-                        <span class="tag">Geographic Analysis</span>
-                    </div>
-                    <a href="#" class="view-link">View Details <i class="ph ph-arrow-right"></i></a>
+                <div class="gradient-card grad-cyan-pink">
+                    <span>📈 Deep Learning Coming Soon</span>
                 </div>
             </div>
+
+            <div class="load-more">
+                <button class="btn btn-outline-dark">Load More Projects <i class="ph ph-arrow-down"></i></button>
+            </div>
+            
         </div>
     </section>
 
     <!-- Let's Work Together Section -->
     <section id="cta" class="cta">
         <div class="container cta-container">
-            <h2>Let's Work Together</h2>
-            <p>Interested in transforming your data into actionable insights? I'm available for consulting, dashboard development, and data analysis projects.</p>
+            <h2>Need a Custom Dashboard for Your Business?</h2>
+            <p>Let's discuss how data visualization can help you make better decisions and achieve your business goals.</p>
             <div class="cta-buttons">
-                <a href="#contact" class="btn btn-primary">Contact Me <i class="ph ph-paper-plane-tilt"></i></a>
+                <a href="#contact" class="btn btn-primary">Explore My Services <i class="ph ph-arrow-right"></i></a>
             </div>
         </div>
     </section>
