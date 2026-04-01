@@ -67,3 +67,35 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// Portfolio filtering logic
+const filterBtns = document.querySelectorAll('.filter-btn');
+const portfolioSections = document.querySelectorAll('.portfolio-section');
+
+if (filterBtns.length > 0 && portfolioSections.length > 0) {
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterBtns.forEach(b => {
+                b.classList.remove('btn-primary');
+            });
+            
+            // Add active class to clicked button
+            btn.classList.add('btn-primary');
+            
+            const filterValue = btn.getAttribute('data-filter');
+            
+            portfolioSections.forEach(section => {
+                if (filterValue === 'all') {
+                    section.style.display = 'block';
+                } else {
+                    if (section.id === filterValue) {
+                        section.style.display = 'block';
+                    } else {
+                        section.style.display = 'none';
+                    }
+                }
+            });
+        });
+    });
+}
